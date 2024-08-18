@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@types/nodemon": "^1.19.6",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "scripts": {
+    "start": "cross-env concurrently \"nodemon --exec ts-node $FILE_NAME\" \"tsc --watch\""
+  }
+}
+
