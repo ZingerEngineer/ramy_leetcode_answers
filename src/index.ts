@@ -1,7 +1,17 @@
-const pi = 3.14
+const prom1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('Success')
+    reject('Error')
+  })
+})
 
-let circumference = (radius: number) => {
-  return 2 * radius * pi
+const fireProm = async () => {
+  try {
+    const res = await prom1
+    console.log(res)
+  } catch (error) {
+    console.log(error)
+  }
 }
 
-console.log(circumference(5)) // 31.4
+fireProm()

@@ -11,8 +11,12 @@
     "typescript": "^5.5.4"
   },
   "scripts": {
-    "start": "cross-env concurrently \"nodemon --exec ts-node $FILE_NAME\" \"tsc --watch\"",
+    "start": "cross-env FILE_NAME=src/index.ts concurrently \"nodemon --exec ts-node %FILE_NAME%\" \"tsc --watch\"",
     "test": "jest --watch"
+  },
+  "devDependencies": {
+    "@types/babel__generator": "^7.6.8",
+    "@types/babel__template": "^7.4.4",
+    "@types/babel__traverse": "^7.20.6"
   }
 }
-
